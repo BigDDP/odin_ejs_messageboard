@@ -1,4 +1,6 @@
 # odin_ejs_messageboard
+
+## Part 1
 1. Set up a basic Express app by installing Express and EJS. Set up a basic index route and run your server. Create the required folders and files as discussed in the previous lessons.
     - 2 routes: (1) index ("/") and (2) “new message” form ("/new").
 2. Create an array at the top of your index router called messages and put a couple of sample messages inside of it like this:
@@ -56,3 +58,6 @@ _Include in `res.render`, ‘locals’ object_
 9. Add “open” button or link next to every message to open a new page with the message details.
 10. Push your project to GitHub.
 11. Submit to Odin.
+
+## Part 2
+12. Host this. Cloudlfare?
