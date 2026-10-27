@@ -63,3 +63,9 @@ _Include in `res.render`, ‘locals’ object_
 12. Host this. Cloudlfare?
 
 # https://odin-ejs-messageboard.curly-pond-2ba7.workers.dev/
+
+## Part 3
+13. Integrate Postgres DB
+14. Rewrite to manage data through DB
+15. Add appropriate server-side validation for user input
+16. Host DB. Nano?

@@ -1,20 +1,18 @@
-const { globalMessages } = require("./index");
-const { dateFormatter } = require("./index");
 const router = require("express").Router();
+const query = require("../db/queries")
 
 router.get("/", (req, res) => res.render("form"));
 
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
     const { authorName, messageText } = req.body;
 
     const message = {
-        id: globalMessages.length + 1,
         text: messageText,
         user: authorName, 
-        added: dateFormatter(new Date())
+        added: new Date()
     }
 
-    globalMessages.push(message)
+    await query.postMessage(message)
 
     res.redirect("/");
 });

@@ -6,6 +6,7 @@ const createResourceRouter = require("./router");
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
+app.locals.dateFormatter = require("./routes/index").dateFormatter;
 
 app.use(express.urlencoded({ extended: true }));
 
