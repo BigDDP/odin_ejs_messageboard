@@ -69,3 +69,6 @@ _Include in `res.render`, ‘locals’ object_
 14. Rewrite to manage data through DB
 15. Add appropriate server-side validation for user input
 16. Host DB. Nano?
+
+### Note: DB connections on Workers
+A shared `pg` `Pool` works in a normal Node server, but not on Cloudflare Workers. A connection opened in one request can't be reused by another, so every request after the first throws. [src/db/pool.js](src/db/pool.js) opens a new connection for each query instead. Cloudflare Hyperdrive can keep connections warm if speed ever matters.
