@@ -1,5 +1,5 @@
 {
-  "name": "odin-messageboard",
+  "name": "odin-ejs-messageboard",
   "main": "src/worker.mjs",
   "compatibility_date": "2026-10-01",
   "compatibility_flags": ["nodejs_compat"],
